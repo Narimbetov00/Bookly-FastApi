@@ -1,5 +1,4 @@
-from fastapi import FastAPI,status
-from fastapi.responses import JSONResponse
+from fastapi import FastAPI
 from src.books.routes import book_router
 from src.auth.routers import auth_router
 from src.reviews.routes import review_router
@@ -22,7 +21,7 @@ app = FastAPI(
     description="A Rest API For a book review web service",
     version=version,
     docs_url=f"/api/{version}/docs",
-   redoc_url=f"/api/{version}/redoc",
+    redoc_url=f"/api/{version}/redoc",
   
 )
 register_all_errors(app)
