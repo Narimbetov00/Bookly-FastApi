@@ -42,5 +42,5 @@ def register_middleware(app:FastAPI):
                         allow_credentials=True
                        )
     app.add_middleware(TrustedHostMiddleware,
-                       allowed_hosts=["*"])
+                       allowed_hosts=["bookly-fastapi-36gk.onrender.com"])
         
